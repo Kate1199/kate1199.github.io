@@ -43,7 +43,7 @@
                     </h1>
                     <div class="hero-section__work-btns">
                         <a href="#contact" class="btn">Hire me</a>
-                        <a href="" class="btn hero-section__btn">Download CV</a>
+                        <a href="{{ asset('doc/kate-kisel.pdf') }}" download class="btn hero-section__btn">Download CV</a>
                     </div>
                 </div>
                 <div class="down-arrow">
@@ -59,7 +59,11 @@
                     About
                     <span class="section-heading__last-word">me</span>
                 </h2>
-                <div class="about-me-section__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem at nisi alias architecto debitis, dolorum officiis voluptatibus iusto natus dolore perferendis, facilis dignissimos doloribus animi quas porro excepturi blanditiis nulla.</div>
+                <div class="about-me-section__content">Hi! I'm Kate and I am fullstack web developer. Passionate about building
+first-class web applications and websites. Developed some training
+websites while studing at Univercity. Participated in the creation of a web
+application for payments during internship at EPAM Systems, Relevant skills
+include programming, layout, database, debugging, and more.</div>
             </div>
         </section>
         <section class="skills-section" id="skills">
@@ -95,9 +99,9 @@
                             <img src="/img/project1.png" alt="" class="work-item__img">
                         </a>
                     </li>
-                    <li class="work-item">
+                    <!-- <li class="work-item">
                         <img src="/img/project2.png" alt="" class="work-item__img">
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </section>

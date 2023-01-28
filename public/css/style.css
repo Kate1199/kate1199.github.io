@@ -185,7 +185,7 @@ body {
     padding-top: 256px;
     padding-bottom: 483px;
     height: 100%;
-    background: no-repeat right url(/img/table.svg);
+    background: right / 70% no-repeat url(/img/table.svg);
 }
 
 .section-heading {
