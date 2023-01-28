@@ -1,0 +1,449 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    --text-color: #EEEEEE;
+    --btn-color: #EA4543;
+    --hero-btn-color: rgba(74, 53, 72, 0.75);
+    --background-color: #2A2E4B;
+    --line-color: rgba(238, 238, 238, 0.1);
+    font-family: 'Kodchasan', sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.header {
+    height: 132px;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.1);
+}
+
+.container {
+    width: 1248px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.header__list {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.header__item {
+    transition-property: all;
+}
+
+.header__item:hover {
+    transform: translateY(-5px);
+    transition-duration: .1s;
+    transition-timing-function: ease-in;
+}
+
+.header__nav-link:active {
+    transition-property: color;
+    color: var(--btn-color);
+    transition-timing-function: ease-in;
+}
+
+.header__item:not(:last-child) {
+    margin-right: 48px;
+}
+
+.header__nav-link {
+    color: var(--text-color);
+}
+
+.header__nav-link_active {
+    color: var(--btn-color);
+}
+
+/* Hero */
+.hero-section {
+    height: 892px;
+    background: url(/img/line.png) no-repeat center / contain;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.hero-section__container {
+    padding-top: 120px;
+    padding-bottom: 64px;
+    background: no-repeat 542px bottom url(/img/girl-sits.png);
+}
+
+.hero-section__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-section__heading {
+    margin-bottom: 45px;
+    width: 902px;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 96px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 32px;
+    margin-right: 24px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
+    background-color: var(--btn-color);
+    border-radius: 24px;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+}
+
+.btn:active {
+    transition-property: color, background-color;
+    color: var(--btn-color);
+    background-color: var(--text-color);
+}
+
+.hero-section__btn {
+    padding-right: 66px;
+    margin-right: 0;
+    background: no-repeat 165px url(/img/download-icon.svg),
+    var(--hero-btn-color);
+}
+
+.down-arrow {
+    padding: 30px 38px;
+    margin-top: 289px;
+    margin-left: 368px;
+    width: 96px;
+    height: 96px;
+    background-color: var(--hero-btn-color);
+    cursor: pointer;
+}
+
+.down-arrow:hover {
+    transition-property: all;
+    transform: translateY(10px);
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+
+.down-arrow__img {
+    width: 21px;
+    height: 36px;
+}
+
+/* About me */
+.about-me-section {
+    height: 1024px;
+    border-bottom: 1px solid var(--line-color);
+    background: url(/img/about-me-line.png) no-repeat center / contain;
+}
+
+.about-me-section__container {
+    padding-top: 256px;
+    padding-bottom: 483px;
+    height: 100%;
+    background: no-repeat right url(/img/table.svg);
+}
+
+.section-heading {
+    margin-bottom: 13px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 83px;
+}
+
+.section-heading__last-word {
+    color: var(--btn-color);
+}
+
+.about-me-section__content {
+    width: 390px;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+/* Skills */
+.skills-section {
+    height: 1024px;
+    border-bottom: 1px solid var(--line-color);
+    background: no-repeat center / contain url(/img/skills-line.png);
+}
+
+.skills-section__container {
+    padding-top: 268px;
+    padding-bottom: 132px;
+}
+
+.section-hading {
+    margin-bottom: 48px;
+}
+
+.skills-section__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-section__item {
+    padding: 30px 47px;
+    padding-top: 20px;
+    width: 368px;
+    height: fit-content;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    background: var(--hero-btn-color);
+    border-radius: 16px;
+}
+
+.skills-section__item:hover {
+    transform: translateY(-10px);
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+}
+
+.skills-section__item-img {
+    margin-bottom: 30px;
+    width: 274px;
+    height: 171px;
+}
+
+.skills-section__heading {
+    margin-bottom: 48px;
+}
+
+/* Portfolio */
+.portfolio-section {
+    height: 1024px;
+    border-bottom: 1px solid var(--line-color);
+    background: no-repeat center / contain url(/img/portfolio-line.png);
+}
+
+.portfolio-section__container {
+    padding-top: 268px;
+    padding-bottom: 345px;
+    height: 100%;
+}
+
+.portfolio-section__heading {
+    margin-bottom: 48px;
+}
+
+.portfolio-section__list {
+    display: flex;
+}
+
+.work-item {
+    padding: 61px 62px;
+    width: 368px;
+    height: 280px;
+    border-radius: 16px;
+    background-color: var(--hero-btn-color);
+}
+
+.work-item:not(:last-child) {
+    margin-right: 48px;
+}
+
+.work-item:hover {
+    transform: translateY(-10px);
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+}
+
+.work-item__img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Contacts */
+.contact-section {
+    height: 1024px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.contact-section__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 258px;
+    padding-bottom: 273px;
+    background: left / 550px no-repeat url(/img/stairs.svg);
+}
+
+.contact-section__heading {
+    margin-right: 48px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form__first-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form__field:not(:last-child) {
+    margin-right: 24px;
+}
+
+.contact-form__label {
+    margin-bottom: 10px;
+}
+
+.contact-form__input {
+    padding: 16px 24px;
+    margin-bottom: 24px;
+    border-width: 0;
+    border-radius: 16px;
+    background-color: var(--hero-btn-color);
+    resize: none;
+}
+
+.contact-form__btn {
+    width: 233px;
+    border-width: 0;
+    text-align: left;
+    background: no-repeat 177px 12px / 24px 24px url(/img/plane-icon.png),
+    var(--btn-color);
+}
+
+/* Footer */
+.footer {
+    border: 1px solid  var(--line-color);
+    height: 400px;
+    background: no-repeat center 148px url(/img/heart.png);
+}
+
+.footer__container {
+    padding-top: 100px;
+    padding-bottom: 48px;
+}
+
+.footer__nav-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 41px;
+}
+
+.footer__nav-item {
+    padding: 10px;
+    padding-left: 44px;
+    width: fit-content;
+    height: 44px;
+}
+
+.footer__nav-item:not(:last-child) {
+    margin-right: 48px;
+}
+
+.footer__nav-item:hover {
+    transform: translateY(-5px);
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+}
+
+.footer__nav-item-home {
+    background: no-repeat 10px 10px / 24px 24px url(/img/house-door.svg);
+}
+
+.footer__nav-item-about-me {
+    background: no-repeat 10px 10px / 24px 24px url(/img/person.svg);
+}
+
+.footer__nav-item-skills {
+    background: no-repeat 10px 10px / 24px 24px url(/img/mortarboard.svg);
+}
+
+.footer__nav-item-portfolio {
+    background: no-repeat 10px 10px / 24px 24px url(/img/briefcase.svg);
+}
+
+.footer__nav-item-contact {
+    background: no-repeat 10px 10px / 24px 24px url(/img/telephone.svg);
+}
+
+.footer__link {
+    color: var(--text-color);
+}
+
+.footer__link:active {
+    color: var(--btn-color);
+    transition-duration: .1s;
+    transition-timing-function: ease-in;
+}
+
+.contact-list {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-list__item {
+    padding: 12px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--hero-btn-color);
+}
+
+.contact-list__item:not(:last-child) {
+    margin-right: 24px;
+}
+
+.footer__rights {
+    margin-top: 92px;
+    text-align: right;
+    color: rgba(238, 238, 238, 0.75);
+}
+
