@@ -53,7 +53,7 @@ jobs:
       if: steps.node_modules-cache.outputs.cache-hit != 'true'
       run: npm ci
     - name: Build frontend
-      run: npm run dev
+      run: npm run build
     - name: Install PHP versions
       uses: shivammathur/setup-php@v2
       with:
