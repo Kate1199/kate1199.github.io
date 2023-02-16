@@ -1,16 +1,20 @@
-FROM composer:2.2 as build
-WORKDIR /app
-COPY . /app
-RUN composer install
+FROM richarvey/nginx-php-fpm:1.7.2
 
-FROM php:8.2.2-apache-bullseye
-RUN docker-php-ext-install pdo pdo_mysql
+COPY . .
 
-EXPOSE 8080
-COPY --from=build /app /var/www/
-COPY docker/000-default.conf /etc/apache2/sites-available/000-default.conf
-COPY .env.example /var/www/.env
-RUN chmod 777 -R /var/www/storage/ && \
-    echo "Listen 8080" >> /etc/apache2/ports.conf && \
-    chown -R www-data:www-data /var/www/ && \
-    a2enmod rewrite
+# Image config
+ENV SKIP_COMPOSER 1
+ENV WEBROOT /var/www/html/public
+ENV PHP_ERRORS_STDERR 1
+ENV RUN_SCRIPTS 1
+ENV REAL_IP_HEADER 1
+
+# Laravel config
+ENV APP_ENV production
+ENV APP_DEBUG false
+ENV LOG_CHANNEL stderr
+
+# Allow composer to run as root
+ENV COMPOSER_ALLOW_SUPERUSER 1
+
+CMD ["/start.sh"]
